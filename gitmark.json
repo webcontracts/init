@@ -1,0 +1,8 @@
+{
+  "@id": "gitmark:e9a68581af2b20dcd79b3bc2fa0e8600494bfb6b46461dc9ec2d5e05dda989de:0",
+  "genesis": "gitmark:e9a68581af2b20dcd79b3bc2fa0e8600494bfb6b46461dc9ec2d5e05dda989de:0",
+  "nick": "webcontract-init",
+  "package": "./package.json",
+  "repository": "./"
+}
+

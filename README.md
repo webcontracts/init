@@ -1,9 +1,9 @@
 <div align="center">
-  <h1>Mark</h1>
+  <h1>Init</h1>
 </div>
 
 <div align="center">  
-<i>Web Contract to Mark Anything</i>
+<i>Web Contract to init a ledger</i>
 </div>
 
 ---
@@ -14,22 +14,16 @@
   
 ---
   
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/webcontracts/mark/blob/gh-pages/LICENSE)
-[![npm](https://img.shields.io/npm/v/webcontract-mark)](https://npmjs.com/package/webcontract-mark)
-[![npm](https://img.shields.io/npm/dw/webcontract-mark.svg)](https://npmjs.com/package/webcontract-mark)
-[![Github Stars](https://img.shields.io/github/stars/webcontracts/mark.svg)](https://github.com/webcontracts/mark/)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/webcontracts/init/blob/gh-pages/LICENSE)
+[![npm](https://img.shields.io/npm/v/webcontract-init)](https://npmjs.com/package/webcontract-init)
+[![npm](https://img.shields.io/npm/dw/webcontract-init.svg)](https://npmjs.com/package/webcontract-init)
+[![Github Stars](https://img.shields.io/github/stars/webcontracts/init.svg)](https://github.com/webcontracts/init/)
   
 # ⚡️ Introduction
 
-Mark is a web contract implementation of the [marking](https://github.com/project-bitmark/marking/wiki#marking) concept.  It allows you to mark anything!
+Init is a web contract to init a ledger
 
 # Data Model
-
-A Mark is a data structure used in conjunction with the [marking](https://github.com/project-bitmark/marking/wiki#marking) concept.
-
-It allows an agent (source) to mark another person, place or thing (destination), including marking links.
-
-The data structure follows the [linkedobjects](https://linkedobjects.org/) specification, and should be compatible with JSON-LD
 
 ## Web Credit
 
@@ -57,7 +51,7 @@ Both the webledger and the web credits will appear as JSON in the `webcredits` d
 
 ## Web Contract
 
-The Web Contract is a single file that operates on the webcredits data store and is described [here](https://github.com/webcontracts/mark/blob/gh-pages/webcontracts/mark.js)
+The Web Contract is a single file that operates on the webcredits data store and is described [here](https://github.com/webcontracts/init/blob/gh-pages/webcontracts/init.js)
 
 ## Signing
 
@@ -66,43 +60,33 @@ Currently signing is done out of band using the [gitmark](https://git-mark.com/)
 # ✍️ API
 
 ```
-mark.js <amount> [description]
+init.js
 ```
 
 The following switches are allowed
 ```
---id          # the id for the credit object
---source      # the source of the mark
---amount      # how much
+--id          # the id for the wallet object
 --currency    # the currency
---destination # what is being marked
---description # a description of why
---context     # optional additional context
---timestamp   # unix style timestamp
---infile      # custom file to use for credits
---indir       # custom dir to use for credits
+--walletFile  # the wallet file
+--creditFile  # the webcredits file
+--ledgerFile  # the webledgers file
+--indir       # the webcredits directory, defaults to ./webcredits
 ```
 
 or from npm 
 
 ```JavaScript
-import mark from 'webcontracts-mark'
+import init from 'webcontracts-init'
 
-var credit = {
+var wallet = {
   id: data.id,
-  source: data.source,
-  amount: data.amount,
-  currency: data.currency,
-  destination: data.destination,
-  description: data.description,
-  context: data.context,
-  timestamp: data.timestamp
+  currency: data.currency
 }
 
-function mark(credit, indir, infile)
+function init(wallet, indir, walletFile, ledgerFile, creditsFile)
 ```
 
-indir and infile are optional and will default to `../webcredits/webcredits.json`
+indir, infile, walletFile, ledgerFile and creditsFile are optional and will default to `../webcredits/webcredits.json`
 
 
 # ⚖️ License

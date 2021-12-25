@@ -1,0 +1,31 @@
+{
+  "name": "webcontract-init",
+  "version": "0.0.1",
+  "description": "init",
+  "main": "webcontracts/init.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webcontracts/init.git"
+  },
+  "keywords": [
+    "webcontract",
+    "webcontracts",
+    "init"
+  ],
+  "author": "Melvin Carvalho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webcontracts/init/issues"
+  },
+  "homepage": "https://github.com/webcontracts/init#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "minimist": "^1.2.5",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
+}

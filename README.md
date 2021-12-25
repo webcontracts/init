@@ -25,11 +25,22 @@ Init is a web contract to init a ledger
 
 # Data Model
 
+## Wallet
+
+```JSON
+{
+ "@type": "Wallet",
+ "webledger": "./webledger.json",
+ "webcredits": "./webcredits.json",
+ "currency": "Mark"
+}
+```
+
 ## Web Credit
 
 Here is a full example of a [Web Credits](https://webcredits.org/) Object
 
-```
+```JSON
 {
   "@id": "urn:cuid:a74xt3jbin",
   "@type": "Credit",
